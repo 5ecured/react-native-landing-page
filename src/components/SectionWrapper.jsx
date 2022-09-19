@@ -22,10 +22,15 @@ const SectionWrapper = ({ title, description, showBtn, mockupImg, banner, revers
           ${reverse ? styles.blackText : styles.whiteText}
           ${styles.descriptionText}`}>{description}</p>
           {showBtn && (
-            <Button
-              assetUrl={assets.expo}
-              link='https://expo.dev/@5ecured/RN-react-native?serviceType=classic&distribution=expo-go'
-            />
+            <>
+              <Button
+                assetUrl={assets.expo}
+                link='https://expo.dev/@5ecured/RN-react-native?serviceType=classic&distribution=expo-go'
+              />
+              <p className={`
+              ${reverse ? styles.blackText : styles.whiteText}
+              ${styles.descriptionText}`}>(The Expo QR code currently only works with Android devices)</p>
+            </>
           )}
         </div>
 
